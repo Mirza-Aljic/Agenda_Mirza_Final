@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.EntityFrameworkCore;
 
-namespace Agenda_Mirzav3.AgendaMirzaDB;
+namespace Agenda_Mirzav3.Agenda_MirzaDB;
 
 public partial class AgendaMirzaContext : DbContext
 {
@@ -41,9 +41,7 @@ public partial class AgendaMirzaContext : DbContext
 
             entity.ToTable("contact");
 
-            entity.Property(e => e.Idcontact)
-                .ValueGeneratedNever()
-                .HasColumnName("idcontact");
+            entity.Property(e => e.Idcontact).HasColumnName("idcontact");
             entity.Property(e => e.Adresse).HasMaxLength(100);
             entity.Property(e => e.Email).HasMaxLength(100);
             entity.Property(e => e.Nom).HasMaxLength(45);

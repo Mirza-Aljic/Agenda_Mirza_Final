@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Agenda_Mirzav3.AgendaMirzaDB;
+namespace Agenda_Mirzav3.Agenda_MirzaDB;
 
 public partial class Contact
 {
