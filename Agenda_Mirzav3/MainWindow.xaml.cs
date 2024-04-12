@@ -15,6 +15,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Agenda_Mirzav3.AgendaMirzaDB;
 using Agenda_Mirzav3.Service.DAO;
+
 using Agenda_Mirzav3.View;
 
 namespace Agenda_Mirzav3
@@ -34,21 +35,21 @@ namespace Agenda_Mirzav3
         private void BTN_Contact_Click(object sender, RoutedEventArgs e)
         {
             Window_Container.Children.Clear();
-            View.PageContact contact = new View.PageContact();
+            PageContact contact = new PageContact();
             Window_Container.Children.Add(contact);
         }
 
         private void BTN_To_Do_List_Click(object sender, RoutedEventArgs e)
         {
             Window_Container.Children.Clear();
-            View.To_Do_List to_do_list = new View.To_Do_List();
+            Page_ToDoList to_do_list = new Page_ToDoList();
             Window_Container.Children.Add(to_do_list);
         }
 
         private void BTN_Calendar_Click(object sender, RoutedEventArgs e)
         {
             Window_Container.Children.Clear();
-            View.Calendar calendar = new View.Calendar();
+            ViewCalendar calendar = new ViewCalendar();
             Window_Container.Children.Add(calendar);
         }
     }

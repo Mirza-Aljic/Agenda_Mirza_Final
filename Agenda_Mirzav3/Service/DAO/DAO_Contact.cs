@@ -47,5 +47,29 @@ namespace Agenda_Mirzav3.Service.DAO
                 context.SaveChanges();  
             }
         }
+
+        public IEnumerable<Contact> GetContactsAmis()
+        {
+            using (var context = new AgendaMirzaContext())
+            {
+                return context.Contacts.Where(c => c.Status == "Amis").ToList();
+            }
+        }
+
+        public IEnumerable<Contact> GetContactsCollegue()
+        {
+            using (var context = new AgendaMirzaContext())
+            {
+                return context.Contacts.Where(c => c.Status == "Collègue").ToList();
+            }
+        }
+
+        public IEnumerable<Contact> GetContactsFamille()
+        {
+            using (var context = new AgendaMirzaContext())
+            {
+                return context.Contacts.Where(c => c.Status == "Famille").ToList();
+            }
+        }
     }
 }

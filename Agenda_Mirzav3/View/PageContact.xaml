@@ -34,15 +34,15 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-            <Button Name="BTN_Amis" Grid.Column="0" Content="Amis" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}"/>
-            <Button Name="BTN_Famille" Grid.Column="1" Content="Famille" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}"/>
-            <Button Name="BTN_Collegue" Grid.Column="2" Content="Collegue" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}"/>
+            <Button Name="BTN_Amis" Grid.Column="0" Content="Amis" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}" Click="BTN_Amis_Click"/>
+            <Button Name="BTN_Famille" Grid.Column="1" Content="Famille" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}" Click="BTN_Famille_Click"/>
+            <Button Name="BTN_Collegue" Grid.Column="2" Content="Collegue" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}" Click="BTN_Collegue_Click"/>
             <Button Name="BTN_Resaux" Grid.Column="3" Content="Resaux" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}"/>
 
         </Grid>
 
         <Grid Grid.Row="1" Name="GD_AddContact">
-            <!-- Datagrid-->
+            <!-- Datagrid Pour afficher les contacts -->
             <DataGrid Name="DG_Contact" Background="White"/>
 
         </Grid>
@@ -60,9 +60,19 @@
             <!-- Boutton Modify-->
             <Button Name="BTN_Modify" Grid.Column="1" Content="Modify" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Click="BTN_Modify_Click" Style="{StaticResource ButtonStyle}"/>
             <!-- Boutton Delate-->
-            <Button Name="BTN_Delate" Grid.Column="2" Content="Delate" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Click="BTN_Delate_Click" Style="{StaticResource ButtonStyle}"/>
-            <!-- Boutton Search-->
-            <Button Name="BTN_Search" Grid.Column="3" Content="Search" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}"/>
+            <Button Name="BTN_Delate" Grid.Column="2" Content="Delete" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Click="BTN_Delate_Click" Style="{StaticResource ButtonStyle}"/>
+
+            <Grid Grid.Column="3">
+                <!--<Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>-->
+
+                <!--<TextBlock Grid.Row="0" Height="40" Width="100" Background="Black"/>-->
+                <!-- Boutton Search-->
+                <Button Name="BTN_Search" Grid.Row="1" Content="Search" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center" Style="{StaticResource ButtonStyle}"/>
+            </Grid>
+           
         </Grid>
 
 

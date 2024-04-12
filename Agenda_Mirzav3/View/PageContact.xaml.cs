@@ -57,10 +57,37 @@ namespace Agenda_Mirzav3.View
 
         private void BTN_Delate_Click(object sender, RoutedEventArgs e)
         {
+
+            if (DG_Contact.SelectedItem == null)
+            {
+                MessageBox.Show("Selectionnez un contact pour le supprimer");
+                return;
+            }
+
             Contact contact = DG_Contact.SelectedItem as Contact;
             Contact_DB.DelateContact(contact.Idcontact);
             DG_Contact.ItemsSource = Contact_DB.GetAllContacts();
+
         }
+
+        private void BTN_Amis_Click(object sender, RoutedEventArgs e)
+        {
+            // Afficher uniquement les contacts de Status "Amis"
+            DG_Contact.ItemsSource = Contact_DB.GetAllContacts().Where(contact => contact.Status == "Amis").ToList();
+        }
+
+        private void BTN_Famille_Click(object sender, RoutedEventArgs e)
+        {
+            // Afficher uniquement les contacts de Status "Famille"
+            DG_Contact.ItemsSource = Contact_DB.GetAllContacts().Where(contact => contact.Status == "Famille").ToList();
+        }
+
+        private void BTN_Collegue_Click(object sender, RoutedEventArgs e)
+        {
+            // Afficher uniquement les contacts de Status "Collègue"
+            DG_Contact.ItemsSource = Contact_DB.GetAllContacts().Where(contact => contact.Status == "Collègue").ToList();
+        }
+
     }
 
 
